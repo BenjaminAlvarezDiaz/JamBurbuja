@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 26
-  productGUID: 009ef521b93a2254cb438b2e3a224095
+  productGUID: bb0c6e39f24d4c94886e4ed19c5ab7d1
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -864,10 +864,10 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: dd5763ff-9285-4635-846d-bf6434d4f82d
+  cloudProjectId: 03554ada-e766-4f57-8f55-2e60f85eca7c
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: JamBurbuja
+  projectName: JamBurbuja 2025-01-25_05-08-50
   organizationId: espartan964
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
