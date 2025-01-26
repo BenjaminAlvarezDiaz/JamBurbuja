@@ -2553,15 +2553,28 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5870393616761212037, guid: 4ff8078fcbb10db4fa76df228512333d, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 2fe3865c2ba68a2448dc835d50732d3e, type: 2}
     - target: {fileID: 6310738592305209676, guid: 4ff8078fcbb10db4fa76df228512333d, type: 3}
       propertyPath: m_Name
       value: PlayerAndFan
       objectReference: {fileID: 0}
+    - target: {fileID: 8961144178278158355, guid: 4ff8078fcbb10db4fa76df228512333d, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 7666893467002199453}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ff8078fcbb10db4fa76df228512333d, type: 3}
+--- !u!95 &7666893467002199453 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5870393616761212037, guid: 4ff8078fcbb10db4fa76df228512333d, type: 3}
+  m_PrefabInstance: {fileID: 7666893467002199452}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

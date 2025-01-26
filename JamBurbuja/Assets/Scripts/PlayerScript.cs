@@ -15,10 +15,13 @@ public class PlayerScript : MonoBehaviour
     // Start is called before the first frame update
     public string targetTag = "teleporter";
     public string sceneName = "MenuNiveles";
+
+    private Animator animator;
     void Start()
     {
         playerRigidbody2D = playerObject.GetComponent<Rigidbody2D>();
         //standingFanRigidbody2D = standingFanObject.GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -67,17 +70,17 @@ public class PlayerScript : MonoBehaviour
             SceneManager.LoadScene(sceneName);
             Debug.Log(collision.gameObject.tag);
         }else {
-            Destroy(playerObject);
-            RestartLevel();
-            
+            animator.SetTrigger("PlayDeath");
+            Invoke("RestartLevel", 0.2f);
         }
         // Reinicia el nivel después de 2 segundos
-        //Invoke("RestartLevel", 0.2f);
+        //
     }
 
     // Método para reiniciar el nivel
     public void RestartLevel()
     {
+        Destroy(playerObject);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
