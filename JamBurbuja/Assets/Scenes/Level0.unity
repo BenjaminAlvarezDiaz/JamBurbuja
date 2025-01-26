@@ -153,7 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerRigidbody2D: {fileID: 3191112}
-  horizontalSpeed: 2
+  horizontalSpeed: 8
 --- !u!50 &3191112
 Rigidbody2D:
   serializedVersion: 4
@@ -190,7 +190,7 @@ Transform:
   m_GameObject: {fileID: 3191110}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.0805223, y: 0.34623423, z: 0.75697947}
+  m_LocalPosition: {x: 0.45, y: 5.32, z: 0.75697947}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -494,7 +494,7 @@ MonoBehaviour:
   standingFanObject: {fileID: 1767444549}
   playerRigidbody2D: {fileID: 107275912}
   growSpeed: 50
-  horizontalSpeed: 2
+  horizontalSpeed: 8
   isHolding: 0
 --- !u!1 &137519862
 GameObject:
@@ -2680,7 +2680,7 @@ Transform:
   m_GameObject: {fileID: 1767444549}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -135.4, y: -31.6, z: -0.75697947}
+  m_LocalPosition: {x: -135.4, y: -31.6, z: -1}
   m_LocalScale: {x: 5.2133956, y: 9.61672, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

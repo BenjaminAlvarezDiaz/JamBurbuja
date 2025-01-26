@@ -9,7 +9,7 @@ public class PlayerScript : MonoBehaviour
     public GameObject standingFanObject;
     public Rigidbody2D playerRigidbody2D;
     public float growSpeed = 5f;
-    public float horizontalSpeed = 4f;
+    public float horizontalSpeed = 8f;
     public bool isHolding = false;
     //public Rigidbody2D standingFanRigidbody2D;
     // Start is called before the first frame update
@@ -36,7 +36,7 @@ public class PlayerScript : MonoBehaviour
             playerRigidbody2D.velocity = new Vector2(horizontalSpeed, playerRigidbody2D.velocity.y);
         }
 
-        Vector2 vector = new Vector2(0, 0.1f);
+        Vector2 vector = new Vector2(0, 0.28f);
 
         if( isHolding && playerRigidbody2D != null)
         {

@@ -12,7 +12,7 @@ public class StandingFanScript : MonoBehaviour, IPointerDownHandler, IPointerUpH
     //private bool isPressed = false;
 
     public Rigidbody2D playerRigidbody2D;
-    public float horizontalSpeed = 2f;
+    public float horizontalSpeed = 8f;
     void Start()
     {
         //targetRigidbody2D = GetComponent<Rigidbody2D>();
