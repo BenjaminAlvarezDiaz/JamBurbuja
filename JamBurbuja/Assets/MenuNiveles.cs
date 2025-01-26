@@ -7,12 +7,12 @@ public class MenuNiveles : MonoBehaviour
 {
     public void PrimerNivel()
     {
-        SceneManager.LoadScene("Level0");
+        SceneManager.LoadScene("COCINA");
     }
-    /*
+    
     public void SegundoNivel()
     {
-        SceneManager.LoadScene();
+        SceneManager.LoadScene("BANO");
     }
-    */
+    
 }
