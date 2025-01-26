@@ -609,9 +609,8 @@ MonoBehaviour:
   switchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: ../../../FMOD Studio/Bubble Escape Jam/Bubble Escape Jam/Bubbles
-    Game Jam2025.fspro
-  sourceBankPath: ../../../FMOD Studio/Bubble Escape Jam/Bubble Escape Jam/Build
+  sourceProjectPath: ../../../FMOD Studio/Bubble escape/Bubble escape/Bubble escape.fspro
+  sourceBankPath: ../../../FMOD Studio/Bubble escape/Bubble escape/Build
   sourceBankPathUnformatted: 
   BankRefreshCooldown: 5
   ShowBankRefreshWindow: 1
