@@ -42,7 +42,7 @@ public class PlayerScript : MonoBehaviour
         {
             playerRigidbody2D.velocity = new Vector2(horizontalSpeed, 0f);;
             playerRigidbody2D.AddForce(vector * growSpeed, ForceMode2D.Impulse);
-            Debug.Log("waaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaats");
+            //Debug.Log("waaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaats");
         }
     }
 
