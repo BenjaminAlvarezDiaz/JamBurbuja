@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: ../../../FMOD Studio/Bubble Escape Jam/Bubble Escape Jam/Build/Desktop/Musica.assets.bank
   Name: Musica.assets
   StudioPath: bank:/Musica.assets
-  lastModified: 638734938250000000
+  lastModified: 638734938254906736
   FileSizes:
   - Name: Desktop
     Value: 2968608
@@ -90,7 +90,7 @@ MonoBehaviour:
   Path: ../../../FMOD Studio/Bubble Escape Jam/Bubble Escape Jam/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638734938250000000
+  lastModified: 638734938254207393
   FileSizes:
   - Name: Desktop
     Value: 1600
@@ -134,7 +134,7 @@ MonoBehaviour:
   Path: ../../../FMOD Studio/Bubble Escape Jam/Bubble Escape Jam/Build/Desktop/FX.assets.bank
   Name: FX.assets
   StudioPath: bank:/FX.assets
-  lastModified: 638734938250000000
+  lastModified: 638734938255779711
   FileSizes:
   - Name: Desktop
     Value: 73344
@@ -181,7 +181,7 @@ MonoBehaviour:
   Path: ../../../FMOD Studio/Bubble Escape Jam/Bubble Escape Jam/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638734938250000000
+  lastModified: 638734938254128022
   FileSizes:
   - Name: Desktop
     Value: 1808
@@ -201,7 +201,7 @@ MonoBehaviour:
   Path: ../../../FMOD Studio/Bubble Escape Jam/Bubble Escape Jam/Build/Desktop/Musica.bank
   Name: Musica
   StudioPath: bank:/Musica
-  lastModified: 638734938250000000
+  lastModified: 638734938254400817
   FileSizes:
   - Name: Desktop
     Value: 4960
@@ -240,7 +240,7 @@ MonoBehaviour:
   - {fileID: -1489026686667421213}
   StringsBanks:
   - {fileID: -7360064463780525273}
-  cacheTime: 638734938250000000
+  cacheTime: 638734938255779711
   cacheVersion: 131622
 --- !u!114 &57349068865322343
 MonoBehaviour:
@@ -257,7 +257,7 @@ MonoBehaviour:
   Path: ../../../FMOD Studio/Bubble Escape Jam/Bubble Escape Jam/Build/Desktop/FX.bank
   Name: FX
   StudioPath: bank:/FX
-  lastModified: 638734938250000000
+  lastModified: 638734938255546579
   FileSizes:
   - Name: Desktop
     Value: 3410
@@ -305,7 +305,7 @@ MonoBehaviour:
   Path: ../../../FMOD Studio/Bubble Escape Jam/Bubble Escape Jam/Build/Desktop/Player.assets.bank
   Name: Player.assets
   StudioPath: bank:/Player.assets
-  lastModified: 638734938250000000
+  lastModified: 638734938255377943
   FileSizes:
   - Name: Desktop
     Value: 47968
@@ -424,7 +424,7 @@ MonoBehaviour:
   Path: ../../../FMOD Studio/Bubble Escape Jam/Bubble Escape Jam/Build/Desktop/Player.bank
   Name: Player
   StudioPath: bank:/Player
-  lastModified: 638734938250000000
+  lastModified: 638734938255134897
   FileSizes:
   - Name: Desktop
     Value: 8848
@@ -468,7 +468,7 @@ MonoBehaviour:
   Path: ../../../FMOD Studio/Bubble Escape Jam/Bubble Escape Jam/Build/Desktop/Master.assets.bank
   Name: Master.assets
   StudioPath: bank:/Master.assets
-  lastModified: 638734938250000000
+  lastModified: 638734938254167703
   FileSizes:
   - Name: Desktop
     Value: 494
