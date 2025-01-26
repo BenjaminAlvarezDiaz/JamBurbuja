@@ -9,10 +9,12 @@ public class PlayerScript : MonoBehaviour
     public GameObject standingFanObject;
     public Rigidbody2D playerRigidbody2D;
     public float growSpeed = 5f;
-    public float horizontalSpeed = 4f;
+    public float horizontalSpeed = 8f;
     public bool isHolding = false;
     //public Rigidbody2D standingFanRigidbody2D;
     // Start is called before the first frame update
+    public string targetTag = "teleporter";
+    public string sceneName = "MenuNiveles";
     void Start()
     {
         playerRigidbody2D = playerObject.GetComponent<Rigidbody2D>();
@@ -36,13 +38,13 @@ public class PlayerScript : MonoBehaviour
             playerRigidbody2D.velocity = new Vector2(horizontalSpeed, playerRigidbody2D.velocity.y);
         }
 
-        Vector2 vector = new Vector2(0, 0.1f);
+        Vector2 vector = new Vector2(0, 0.28f);
 
-        if( isHolding && playerRigidbody2D != null)
+        if( isHolding && playerRigidbody2D != null && playerObject.transform.position.y - standingFanObject.transform.position.y <= 40f)
         {
             playerRigidbody2D.velocity = new Vector2(horizontalSpeed, 0f);;
             playerRigidbody2D.AddForce(vector * growSpeed, ForceMode2D.Impulse);
-            Debug.Log("waaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaats");
+            //Debug.Log("waaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaats");
         }
     }
 
@@ -61,9 +63,14 @@ public class PlayerScript : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        // Destruye la burbuja
-        Destroy(playerObject);
-        RestartLevel();
+        if(collision.gameObject.CompareTag(targetTag)){
+            SceneManager.LoadScene(sceneName);
+            Debug.Log(collision.gameObject.tag);
+        }else {
+            Destroy(playerObject);
+            RestartLevel();
+            
+        }
         // Reinicia el nivel después de 2 segundos
         //Invoke("RestartLevel", 0.2f);
     }
