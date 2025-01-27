@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using FMOD.Studio;
+using FMODUnity;
 
 public class PlayerScript : MonoBehaviour
 {
@@ -11,27 +13,61 @@ public class PlayerScript : MonoBehaviour
     public float growSpeed = 5f;
     public float horizontalSpeed = 8f;
     public bool isHolding = false;
+    
+    public AudioSource audioSource;
+    public float maxPitch = 20f;
+    public float pitchIncreaseRate = 100000f;
+
     //public Rigidbody2D standingFanRigidbody2D;
-    // Start is called before the first frame update
     public string targetTag = "teleporter";
     public string sceneName = "MenuNiveles";
+
+    /*public FMOD.Studio.EventInstance ambience;
+    public FMOD.Studio.PLAYBACK_STATE state;*/
+    //public FMODUnity.StudioEventEmitter fmodEmitter;
+
+    //private EventInstance fanEnginer;
+    //private EventReference _fanEnginer;
+    //private PARAMETER_DESCRIPTION Ventilador;
+
+    private Animator animator;
+
+    void Awake()
+    {
+        //fanEnginer.getParameterDescriptionByName ("Ventilador", out Ventilador);
+    }
     void Start()
     {
         playerRigidbody2D = playerObject.GetComponent<Rigidbody2D>();
         //standingFanRigidbody2D = standingFanObject.GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
+
+        //fanEnginer = RuntimeManager.CreateInstance(_fanEnginer);
+
+        /*RuntimeManager.AttachInstanceToGameObject(
+            fanEnginer,
+            GetComponent<Transform>(),
+            GetComponent<Rigidbody>()
+        );*/
+
+        //fanEnginer.start();
+
+        //ambience = FMODUnity.RuntimeManager.CreateInstance("event:/Tutorial_Music");
+
+        /*if(state != FMOD.Studio.PLAYBACK_STATE){
+            ambience.start();
+        }*/
+
+        /*fmodEmitter = GetComponent<FMODUnity.StudioEventEmitter>();
+        
+        if(fmodEmitter.IsPlaying() != null){
+            fmodEmitter.Play();
+        }*/
     }
 
     // Update is called once per frame
     void Update()
     {
-
-        /*if (playerObject.transform.localPosition.y - standingFanObject.transform.localPosition.y <= 5f){
-            //playerRigidbody2D.mass = 0f;
-            //playerRigidbody2D.gravityScale = 0f;
-            //playerRigidbody2D.bodyType = RigidbodyType2D.Kinematic;
-        } else {
-            //playerRigidbody2D.bodyType = RigidbodyType2D.Dynamic;
-        }*/
 
         if (playerRigidbody2D != null)
         {
@@ -45,6 +81,10 @@ public class PlayerScript : MonoBehaviour
             playerRigidbody2D.velocity = new Vector2(horizontalSpeed, 0f);;
             playerRigidbody2D.AddForce(vector * growSpeed, ForceMode2D.Impulse);
             //Debug.Log("waaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaats");
+            //Ventilador.setValue(vector * growSpeed);
+            if(audioSource.pitch <= maxPitch){
+                SetAudioSpeed(audioSource.pitch + pitchIncreaseRate);
+            }
         }
     }
 
@@ -53,12 +93,18 @@ public class PlayerScript : MonoBehaviour
         
     }
 
+    public void SetAudioSpeed(float speed)
+    {
+        audioSource.pitch = speed;
+    }
+
     public void OnButtonDown() {
         isHolding = true;
     }
 
     public void OnButtonUp() {
         isHolding = false;
+        SetAudioSpeed(audioSource.pitch - pitchIncreaseRate);
     }
 
     public void OnCollisionEnter2D(Collision2D collision)
@@ -66,18 +112,19 @@ public class PlayerScript : MonoBehaviour
         if(collision.gameObject.CompareTag(targetTag)){
             SceneManager.LoadScene(sceneName);
             Debug.Log(collision.gameObject.tag);
+            //fmodEmitter.Stop();
         }else {
-            Destroy(playerObject);
-            RestartLevel();
-            
+            animator.SetTrigger("PlayDeath");
+            Invoke("RestartLevel", 0.2f);
+            //ambience.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
         }
         // Reinicia el nivel después de 2 segundos
-        //Invoke("RestartLevel", 0.2f);
     }
 
     // Método para reiniciar el nivel
     public void RestartLevel()
     {
+        Destroy(playerObject);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
