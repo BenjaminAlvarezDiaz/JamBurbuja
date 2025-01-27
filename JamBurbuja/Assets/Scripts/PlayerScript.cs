@@ -22,6 +22,8 @@ public class PlayerScript : MonoBehaviour
     public string targetTag = "teleporter";
     public string sceneName = "MenuNiveles";
 
+    public ControllerButton holdButton;
+
     /*public FMOD.Studio.EventInstance ambience;
     public FMOD.Studio.PLAYBACK_STATE state;*/
     //public FMODUnity.StudioEventEmitter fmodEmitter;
@@ -76,7 +78,7 @@ public class PlayerScript : MonoBehaviour
 
         Vector2 vector = new Vector2(0, 0.28f);
 
-        if( isHolding && playerRigidbody2D != null && playerObject.transform.position.y - standingFanObject.transform.position.y <= 40f)
+        if( holdButton != null && holdButton.isHolding && playerRigidbody2D != null && playerObject.transform.position.y - standingFanObject.transform.position.y <= 40f)
         {
             playerRigidbody2D.velocity = new Vector2(horizontalSpeed, 0f);;
             playerRigidbody2D.AddForce(vector * growSpeed, ForceMode2D.Impulse);
@@ -93,19 +95,19 @@ public class PlayerScript : MonoBehaviour
         
     }
 
-    public void SetAudioSpeed(float speed)
+    /*public void SetAudioSpeed(float speed)
     {
         audioSource.pitch = speed;
-    }
+    }*/
 
-    public void OnButtonDown() {
+    /*public void OnButtonDown() {
         isHolding = true;
     }
 
     public void OnButtonUp() {
         isHolding = false;
         //SetAudioSpeed(audioSource.pitch - pitchIncreaseRate);
-    }
+    }*/
 
     public void OnCollisionEnter2D(Collision2D collision)
     {

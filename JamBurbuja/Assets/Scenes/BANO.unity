@@ -580,6 +580,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 14.1
       objectReference: {fileID: 0}
+    - target: {fileID: 8961144178278158355, guid: 4ff8078fcbb10db4fa76df228512333d, type: 3}
+      propertyPath: holdButton
+      value: 
+      objectReference: {fileID: 2038711468}
     - target: {fileID: 9158578729777927254, guid: 4ff8078fcbb10db4fa76df228512333d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.9901886
@@ -1512,17 +1516,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7c313fcfe991a149988bf8e14946996, type: 3}
---- !u!114 &649110372 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5759109693094677084, guid: a7c313fcfe991a149988bf8e14946996, type: 3}
-  m_PrefabInstance: {fileID: 649110371}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &755398771
 GameObject:
   m_ObjectHideFlags: 0
@@ -3079,17 +3072,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 182.15}
---- !u!114 &1551370721 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8961144178278158355, guid: 4ff8078fcbb10db4fa76df228512333d, type: 3}
-  m_PrefabInstance: {fileID: 157492691}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2294cef8fc09f749a3f44ab8f456e56, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1587598762
 GameObject:
   m_ObjectHideFlags: 0
@@ -3974,8 +3956,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -261.4, y: -155.8}
-  m_SizeDelta: {x: 316.2632, y: 65.5846}
+  m_AnchoredPosition: {x: 39.882, y: -38.1364}
+  m_SizeDelta: {x: 3686.14, y: 2425.123}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2038711466
 MonoBehaviour:
@@ -4024,66 +4006,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 2038711463}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Script: {fileID: 11500000, guid: 094c36ad21eed0c44b87afdd77338b22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 2
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1551370721}
-          m_TargetAssemblyTypeName: PlayerScript, Assembly-CSharp
-          m_MethodName: OnButtonDown
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 649110372}
-          m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
-          m_MethodName: Play
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 3
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1551370721}
-          m_TargetAssemblyTypeName: PlayerScript, Assembly-CSharp
-          m_MethodName: OnButtonUp
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 649110372}
-          m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
-          m_MethodName: Stop
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+  isHolding: 0
+  audioEvent:
+    Guid:
+      Data1: 797864239
+      Data2: 1199925409
+      Data3: -1337504615
+      Data4: 988791054
+    Path: event:/Ventilador
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

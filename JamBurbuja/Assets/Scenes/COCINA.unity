@@ -252,17 +252,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
---- !u!114 &107275914 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8961144178278158355, guid: 4ff8078fcbb10db4fa76df228512333d, type: 3}
-  m_PrefabInstance: {fileID: 7666893467002199452}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1542027439}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2294cef8fc09f749a3f44ab8f456e56, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &137519862
 GameObject:
   m_ObjectHideFlags: 0
@@ -1629,8 +1618,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -264, y: -158}
-  m_SizeDelta: {x: 238.2488, y: 76.4442}
+  m_AnchoredPosition: {x: -1.4658, y: 5.8444}
+  m_SizeDelta: {x: 2695.3447, y: 1525.9978}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1214038500
 MonoBehaviour:
@@ -1679,66 +1668,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1214038497}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Script: {fileID: 11500000, guid: 094c36ad21eed0c44b87afdd77338b22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 2
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 107275914}
-          m_TargetAssemblyTypeName: PlayerScript, Assembly-CSharp
-          m_MethodName: OnButtonDown
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 1618000852}
-          m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
-          m_MethodName: Play
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 3
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 107275914}
-          m_TargetAssemblyTypeName: PlayerScript, Assembly-CSharp
-          m_MethodName: OnButtonUp
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 1618000852}
-          m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
-          m_MethodName: Stop
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+  isHolding: 0
+  audioEvent:
+    Guid:
+      Data1: 797864239
+      Data2: 1199925409
+      Data3: -1337504615
+      Data4: 988791054
+    Path: event:/Ventilador
 --- !u!1 &1229260842
 GameObject:
   m_ObjectHideFlags: 0
@@ -2269,17 +2209,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1618000852 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5759109693094677084, guid: a7c313fcfe991a149988bf8e14946996, type: 3}
-  m_PrefabInstance: {fileID: 8102289931926703185}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1678639505
 GameObject:
   m_ObjectHideFlags: 0
@@ -2824,6 +2753,10 @@ PrefabInstance:
       propertyPath: animator
       value: 
       objectReference: {fileID: 7666893467002199453}
+    - target: {fileID: 8961144178278158355, guid: 4ff8078fcbb10db4fa76df228512333d, type: 3}
+      propertyPath: holdButton
+      value: 
+      objectReference: {fileID: 1214038502}
     - target: {fileID: 8961144178278158355, guid: 4ff8078fcbb10db4fa76df228512333d, type: 3}
       propertyPath: audioSource
       value: 
