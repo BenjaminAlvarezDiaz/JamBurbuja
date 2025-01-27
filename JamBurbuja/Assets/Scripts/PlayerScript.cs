@@ -14,9 +14,9 @@ public class PlayerScript : MonoBehaviour
     public float horizontalSpeed = 8f;
     public bool isHolding = false;
     
-    public AudioSource audioSource;
-    public float maxPitch = 20f;
-    public float pitchIncreaseRate = 100000f;
+    private AudioSource audioSource;
+    private float maxPitch = 20f;
+    private float pitchIncreaseRate = 100000f;
 
     //public Rigidbody2D standingFanRigidbody2D;
     public string targetTag = "teleporter";
@@ -82,9 +82,9 @@ public class PlayerScript : MonoBehaviour
             playerRigidbody2D.AddForce(vector * growSpeed, ForceMode2D.Impulse);
             //Debug.Log("waaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaats");
             //Ventilador.setValue(vector * growSpeed);
-            if(audioSource.pitch <= maxPitch){
+            /*if(audioSource.pitch <= maxPitch){
                 SetAudioSpeed(audioSource.pitch + pitchIncreaseRate);
-            }
+            }*/
         }
     }
 
@@ -104,7 +104,7 @@ public class PlayerScript : MonoBehaviour
 
     public void OnButtonUp() {
         isHolding = false;
-        SetAudioSpeed(audioSource.pitch - pitchIncreaseRate);
+        //SetAudioSpeed(audioSource.pitch - pitchIncreaseRate);
     }
 
     public void OnCollisionEnter2D(Collision2D collision)
